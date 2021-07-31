@@ -1,0 +1,8 @@
+talent/model/Jurat.java
+ talent.model.Jurat
+talent/model/Entity.java
+ talent.model.Entity
+talent/model/Concurent.java
+ talent.model.Concurent
+talent/model/Result.java
+ talent.model.Result

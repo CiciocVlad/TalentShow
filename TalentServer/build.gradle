@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'StartRpcServer'
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    compile project(':TalentDomain')
+    compile project(':TalentPersistence')
+    compile project(':TalentServices')
+
+    compile 'org.springframework:spring-context:5.0.4.RELEASE'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8

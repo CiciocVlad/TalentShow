@@ -1,0 +1,4 @@
+.loginButton:hover {
+    -fx-background-color: #1b1717;
+    -fx-text-fill: #810000;
+}

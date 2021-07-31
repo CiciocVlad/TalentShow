@@ -1,0 +1,55 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.3.RELEASE")
+        classpath("org.springframework.boot:spring-boot-autoconfigure:1.5.3.RELEASE")
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    compile project(':TalentDomain')
+    compile project(':TalentPersistence')
+
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.5'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('com.jayway.jsonpath:json-path')
+
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.4.30.Final'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.9.5'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.9.5'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile('com.jayway.jsonpath:json-path')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8

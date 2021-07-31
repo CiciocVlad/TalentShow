@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="talent.client.controller.Login"
+            prefHeight="357.0" prefWidth="294.0" stylesheets="@login.css" style="-fx-background-color: #eeebdd">
+    <Label layoutX="70.0" layoutY="36.0" text="Username" textFill="#630000">
+        <font>
+            <Font name="Century" size="20.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="usernameLogin" layoutX="62.0" layoutY="68.0" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: #810000; -fx-background-radius: 60; -fx-border-radius: 60; -fx-text-fill: #1b1717">
+        <font>
+            <Font name="Century" size="14.0"/>
+        </font>
+    </TextField>
+    <Label layoutX="70.0" layoutY="130.0" text="Parola" textFill="#630000">
+        <font>
+            <Font name="Century" size="20.0"/>
+        </font>
+    </Label>
+    <PasswordField fx:id="passwordLogin" layoutX="62.0" layoutY="164.0" prefHeight="45.0" prefWidth="170.0"/>
+    <Button layoutX="100.0" layoutY="240.0" mnemonicParsing="false" onAction="#loginMethod" prefHeight="40" prefWidth="100" styleClass="loginButton" style="-fx-background-color: #810000; -fx-text-fill: #1b1717; -fx-border-radius: 60; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-family: 'Courier New'; -fx-background-radius: 50" text="Login" fx:id="button"/>
+</AnchorPane>

@@ -1,0 +1,8 @@
+rootProject.name = 'ATalentShow'
+include 'TalentDomain'
+include 'TalentPersistence'
+include 'TalentServices'
+include 'TalentServer'
+include 'TalentClient'
+include 'RestServices'
+

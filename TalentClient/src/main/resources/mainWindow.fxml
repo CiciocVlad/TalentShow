@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="talent.client.controller.MainWindow">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="600.0">
+        <TableView fx:id="concurentiTableView" layoutX="43.0" layoutY="22.0" prefHeight="374.0"
+                   prefWidth="223.0">
+            <columns>
+                <TableColumn fx:id="columnConcurent" prefWidth="109.0" text="Concurent"/>
+                <TableColumn fx:id="columnResult" prefWidth="109.0" text="Result"/>
+            </columns>
+        </TableView>
+        <Button layoutX="280.0" layoutY="360.0" mnemonicParsing="false" onAction="#addResultYes" prefHeight="30.0"
+                prefWidth="200.0" text="Add Yes Result" />
+        <Button layoutX="280.0" layoutY="300.0" mnemonicParsing="false" onAction="#addResultNo" prefHeight="30.0"
+                prefWidth="200.0" text="Add No Result" />
+        <Button fx:id="logOutBtn" layoutX="325.0" layoutY="450.0" prefWidth="113" prefHeight="25" mnemonicParsing="false" text="Log out" onAction="#logOut"/>
+    </AnchorPane>
+</AnchorPane>

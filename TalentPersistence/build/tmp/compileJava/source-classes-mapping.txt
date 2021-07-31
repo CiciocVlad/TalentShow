@@ -1,0 +1,27 @@
+talent/persistence/repository/JdbcUtils.java
+ talent.persistence.repository.JdbcUtils
+talent/persistence/repository/org/hibernate/dialect/identity/SQLiteDialectIdentityColumnSupport.java
+ talent.persistence.repository.org.hibernate.dialect.identity.SQLiteDialectIdentityColumnSupport
+talent/persistence/repository/IConcurent.java
+ talent.persistence.repository.IConcurent
+talent/persistence/repository/JuratDBRepo.java
+ talent.persistence.repository.JuratDBRepo
+talent/persistence/repository/ResultDBRepo.java
+ talent.persistence.repository.ResultDBRepo
+talent/persistence/repository/JuratDBRepoORM.java
+ talent.persistence.repository.JuratDBRepoORM
+talent/persistence/repository/IResult.java
+ talent.persistence.repository.IResult
+talent/persistence/repository/IJurat.java
+ talent.persistence.repository.IJurat
+talent/persistence/repository/ConcurentDBRepo.java
+ talent.persistence.repository.ConcurentDBRepo
+talent/persistence/repository/Repository.java
+ talent.persistence.repository.Repository
+talent/persistence/repository/org/hibernate/dialect/SQLiteDialect.java
+ talent.persistence.repository.org.hibernate.dialect.SQLiteDialect
+ talent.persistence.repository.org.hibernate.dialect.SQLiteDialect$1
+ talent.persistence.repository.org.hibernate.dialect.SQLiteDialect$2
+ talent.persistence.repository.org.hibernate.dialect.SQLiteDialect$3
+ talent.persistence.repository.org.hibernate.dialect.SQLiteDialect$4
+ talent.persistence.repository.org.hibernate.dialect.SQLiteDialect$SQLiteUniqueDelegate

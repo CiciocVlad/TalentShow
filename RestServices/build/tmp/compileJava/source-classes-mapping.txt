@@ -1,0 +1,8 @@
+rest/concurenti/TalentConcurenti.java
+ rest.concurenti.TalentConcurenti
+talent/services/rest/ServiceException.java
+ talent.services.rest.ServiceException
+start/StartRestServices.java
+ start.StartRestServices
+talent/services/rest/TalentController.java
+ talent.services.rest.TalentController

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:properties location="classpath:talentServer.properties" id="jdbcProps" />
+    <bean id="RepoDbJurat" class="talent.persistence.repository.JuratDBRepo">
+        <constructor-arg ref="jdbcProps"/>
+    </bean>
+    <bean id="RepoDbConcurent" class="talent.persistence.repository.ConcurentDBRepo">
+        <constructor-arg ref="jdbcProps" index="0"/>
+    </bean>
+    <bean id="RepoDbResult" class="talent.persistence.repository.ResultDBRepo">
+        <constructor-arg ref="jdbcProps" index="0"/>
+    </bean>
+
+    <bean id="talentService" class="talent.server.TalentService">
+        <constructor-arg ref="RepoDbJurat" index="0"/>
+        <constructor-arg ref="RepoDbConcurent" index="1"/>
+        <constructor-arg ref="RepoDbResult" index="2"/>
+    </bean>
+
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <property name="serviceName" value="TalentService"/>
+        <property name="service" ref="talentService"/>
+        <property name="serviceInterface" value="talent.services.ITalentServices"/>
+        <property name="registryPort" value="1099"/>
+    </bean>
+</beans>
